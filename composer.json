@@ -1,0 +1,48 @@
+{
+    "name": "t3starteraudio/t3starter-audio",
+    "description": "Audio content element for mp3 files and intro image.  Explore https://t3tstarter.de",
+    "type": "typo3-cms-extension",
+    "version": "1.0.0",
+    "license": "MIT",
+    "keywords": [
+        "TYPO3 CMS",
+        "bootstrap",
+        "responsive",
+        "frontend",
+        "Content",
+        "Element"
+    ],
+    "require": {
+        "typo3/cms-backend": "^10.4.11 || ^11.5",
+        "typo3/cms-core": "^10.4.11 || ^11.5",
+        "typo3/cms-extbase": "^10.4.11 || ^11.5",
+        "typo3/cms-fluid": "^10.4.11 || ^11.5",
+        "typo3/cms-frontend": "^10.4.11 || ^11.5"
+    },
+    "replace": {
+        "typo3-ter/t3starter-audio": "self.version"
+    },
+    "homepage": "https://www.t3starter.de",
+    "support": {
+        "issues": "https://github.com/CMS-Internetsolutions/t3starter_audio/issues"
+    },
+    "authors": [
+        {
+            "name": "T3Starter",
+            "email": "eric.haake@gmail.com",
+            "role": "Developer",
+            "homepage": "http://www.cms-internetsolutions.de/"
+        }
+    ],
+
+    "autoload": {
+        "psr-4": {
+            "T3starterAudio\\T3starterAudio\\": "Classes/"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "t3starter_audio"
+        }
+    }
+}

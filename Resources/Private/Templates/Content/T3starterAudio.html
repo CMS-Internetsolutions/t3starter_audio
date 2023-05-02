@@ -1,0 +1,56 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<div {f:if(condition: animationSettings, then:
+'{animationSettings -> f:format.raw()}')} >
+<f:comment><!--frame_class start animate--></f:comment>
+
+<div id="c{data.uid} layout{data.layout}"
+     class="frame frame-{data.frame_class} frame-type-{data.CType} frame-layout-{data.layout}{f:if(condition: data.space_before_class, then: ' frame-space-before-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' frame-space-after-{data.space_after_class}')}"
+     xmlns:F="http://www.w3.org/1999/html">
+
+
+<div class="row">
+
+    <div class="col">
+        <h2 class="header02class">
+            <f:if condition="{data.header}">
+                {data.header}
+            </f:if>
+        </h2>
+        <div class="row">
+            <div class="col">
+                <f:if condition="{data_image}">
+                    <f:for each="{data_image}" as="file">
+                        <f:image class="img-fluid" image="{file}" alt="{file.alternative}" title="{file.title}" width="700" />
+                    </f:for>
+                </f:if>
+                <p style="text-align: right;margin-bottom: 0px;min-height: 25px; font-size: 12px">
+                    <f:if condition="{data_image}">
+                        <f:for each="{data_image}" as="file">
+                            {file.description}
+                        </f:for>
+                    </f:if>
+                </p>
+                <div class="row">
+                    <div class="col">
+                        <div style="text-align: center;">
+                            <f:if condition="{data.tx_t3starteraudio_audio01link}">
+                                <audio controls="">
+                                    <source src="<f:uri.typolink parameter="{data.tx_t3starteraudio_audio01link}" absolute="1" />" type="audio/mpeg">
+                                </audio>
+                            </f:if>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-md-1 offset-md-7"></div>
+</div>
+
+</div>
+<f:comment><!--frame_class end div--></f:comment>
+</div>
+</html>

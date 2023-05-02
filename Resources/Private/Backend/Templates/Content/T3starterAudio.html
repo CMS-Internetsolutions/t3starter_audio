@@ -1,0 +1,41 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <h2 class="header02class">
+                <f:if condition="{data.header}">
+                    {row.header}
+                </f:if>
+            </h2>
+            <div class="row">
+                <div class="col text-center">
+                    <f:if condition="{processedRow.image}">
+                        <f:for each="{processedRow.image}" as="file">
+                            <f:image src="{file.uid}" treatIdAsReference="1" class="img-fluid" height="auto" width="300" style="min-width:100px"/>
+                        </f:for>
+                    </f:if>
+                    <p style="text-align: center;margin-bottom: 0px;min-height: 25px; font-size: 12px">
+                        <f:if condition="{processedRow.image}">
+                            <f:for each="{processedRow.image}" as="file">
+                                <strong>Bildunterschrift:</strong>{file.description}
+                            </f:for>
+                        </f:if>
+                    </p>
+                    <div class="row">
+                        <div class="col">
+                            <div style="text-align: center;">
+                                <f:if condition="{processedRow.tx_t3starteraudio_audio01link}">
+                                    <audio controls="">
+                                        <source src="<f:uri.typolink parameter="{processedRow.tx_t3starteraudio_audio01link}" absolute="1" />" type="audio/mpeg">
+                                    </audio>
+                                    <br>
+                                    <strong>File:</strong><f:uri.typolink parameter="{processedRow.tx_t3starteraudio_audio01link}"/>
+                                </f:if>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

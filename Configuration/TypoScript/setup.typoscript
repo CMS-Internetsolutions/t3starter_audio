@@ -1,0 +1,23 @@
+############## USE MASK EXT KEY HERE and INCLUDE ON TOP !!!! ##############
+tt_content.t3starteraudio_t3starter_audio < lib.contentElement
+# import default setup for content_animations END
+
+tt_content.t3starteraudio_t3starter_audio = FLUIDTEMPLATE
+tt_content.t3starteraudio_t3starter_audio {
+    layoutRootPaths.0 = EXT:t3starter_audio/Resources/Private/Layouts/
+    layoutRootPaths.10 = {$plugin.tx_t3starteraudio.view.layoutRootPath}
+    partialRootPaths.0 = EXT:t3starter_audio/Resources/Private/Partials/
+    partialRootPaths.10 = {$plugin.tx_t3starteraudio.view.partialRootPath}
+    templateRootPaths.0 = EXT:t3starter_audio/Resources/Private/Templates/Content/
+    templateRootPaths.10 = {$plugin.tx_t3starteraudio.view.templateRootPath}
+    templateName = T3starterAudio
+    dataProcessing.10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+    dataProcessing.10 {
+        if.isTrue.field = image
+        references {
+            fieldName = image
+            table = tt_content
+        }
+        as = data_image
+    }
+}

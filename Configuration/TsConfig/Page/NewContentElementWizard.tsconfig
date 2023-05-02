@@ -1,0 +1,22 @@
+mod.wizards.newContentElement.wizardItems.common.show := removeFromList(default-extension-icon, empty_content_element, nested-content-elements, simple-element)
+mod.wizards.newContentElement.wizardItems.t3saudio {
+    header = Audio
+    elements {
+
+        default-extension-icon < mod.wizards.newContentElement.wizardItems.common.elements.default-extension-icon
+        empty_content_element < mod.wizards.newContentElement.wizardItems.common.elements.empty_content_element
+        nested-content-elements < mod.wizards.newContentElement.wizardItems.common.elements.nested-content-elements
+        simple-element < mod.wizards.newContentElement.wizardItems.common.elements.simple-element
+
+        t3starter_audio {
+            iconIdentifier = tx_t3starteraudio_t3starter_audio
+            title = LLL:EXT:t3starter_audio/Resources/Private/Language/locallang_db_new_content_el.xlf:wizards.newContentElement.t3starter_audio_title
+            description = LLL:EXT:t3starter_audio/Resources/Private/Language/locallang_db_new_content_el.xlf:wizards.newContentElement.t3starter_audio_description
+            tt_content_defValues {
+                CType = t3starteraudio_t3starter_audio
+            }
+        }
+    }
+
+    show := addToList(t3starter_audio, collapsehoriz, nested-content-elements, simple-element, default-extension-icon, empty_content_element)
+}

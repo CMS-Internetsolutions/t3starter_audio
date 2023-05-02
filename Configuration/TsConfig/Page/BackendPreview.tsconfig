@@ -1,0 +1,3 @@
+mod.web_layout.tt_content.preview.t3starteraudio.templateRootPath = EXT:t3starter_audio/Resources/Private/Backend/Templates/Content/
+mod.web_layout.tt_content.preview.t3starteraudio.layoutRootPath = EXT:t3starter_audio/Resources/Private/Backend/Layout/
+mod.web_layout.tt_content.preview.t3starteraudio.partialRootPath = EXT:t3starter_audio/Resources/Private/Backend/Partials/

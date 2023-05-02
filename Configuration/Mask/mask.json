@@ -1,0 +1,84 @@
+{
+    "tt_content": {
+        "elements": {
+            "t3starter_audio": {
+                "color": "#000000",
+                "colorOverlay": "#000000",
+                "columns": [
+                    "header",
+                    "image",
+                    "tx_mask_audio01link"
+                ],
+                "description": "Contentelement Audio mit Bildelement.",
+                "descriptions": [
+                    "",
+                    "",
+                    ""
+                ],
+                "icon": "fa-file-audio-o",
+                "iconOverlay": "fa-file-audio-o",
+                "key": "t3starter_audio",
+                "label": "T3Starter Audio",
+                "labels": [
+                    "Headline Audiodatei",
+                    "",
+                    "Eine Audiodatei w\u00e4hlen"
+                ],
+                "shortLabel": "Contentelement Audio ",
+                "sorting": 3
+            }
+        },
+        "sql": {
+            "tx_mask_audio01link": {
+                "tt_content": {
+                    "tx_mask_audio01link": "varchar(255) DEFAULT '' NOT NULL"
+                }
+            }
+        },
+        "tca": {
+            "header": {
+                "coreField": 1,
+                "fullKey": "header",
+                "key": "header",
+                "type": "string"
+            },
+            "image": {
+                "coreField": 1,
+                "fullKey": "image",
+                "imageoverlayPalette": 1,
+                "key": "image",
+                "type": "file"
+            },
+            "tx_mask_audio01link": {
+                "config": {
+                    "eval": "required",
+                    "fieldControl": {
+                        "linkPopup": {
+                            "options": {
+                                "allowedExtensions": "mp3,ogg,wav",
+                                "blindLinkOptions": "page,url,mail,telephone,folder"
+                            }
+                        }
+                    },
+                    "renderType": "inputLink",
+                    "type": "input"
+                },
+                "fullKey": "tx_mask_audio01link",
+                "key": "audio01link",
+                "type": "link"
+            }
+        }
+    },
+    "mask_export": {
+        "elements": {
+            "configuration": {
+                "key": "configuration",
+                "label": "t3starter_audio",
+                "shortLabel": "T3starterAudio",
+                "columns": [
+                    "t3starter_audio"
+                ]
+            }
+        }
+    }
+}
